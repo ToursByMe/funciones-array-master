@@ -19,7 +19,7 @@ let words = [
   'crackpot'
 ];
 
-/*function findLongestWord(words = []){//le decimos que es una array
+/* function findLongestWord(words = []){//le decimos que es una array
  
  let larga ='';
  let largo = 0;
@@ -35,7 +35,7 @@ if ((words.length)){
    else larga = undefined;
 console.log(larga.length);
   
-}*/
+} */
 function findLongestWord(words) {
   // definim variables
   let maxlength = '';
@@ -144,12 +144,29 @@ let wordsUnique = [
 //let findWords = wordsUnique.match(/i/g);
 
 
-function uniquifyArray([]){
+function uniquifyArray(words){
   
- // let value = wordsUnique.match(/i/g);
-  return undefined;
+ let indice = 0;
+ let indiceOk = 0;
+
+ while( indice < words.length){
+   do{
+     indiceOk = words.indexOf(words[indice],indice+1)
+     if (indiceOk > 0){
+       words.splice(indiceOk,1);
+     }
+
+   } while (indiceOk > 0);
+    indice++;
+   
+   }
+   if (words.length == 0)
+   return;
+
+   return words;
+ }
     
-}
+
 let newArr = wordsUnique.filter(uniquifyArray);
 
 console.log(newArr);
