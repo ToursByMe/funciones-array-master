@@ -5,14 +5,18 @@ function maxOfTwoNumbers(n1,n2){
     
   if(n1>n2){
     return n1;
+  }else if(n1 === n2){
+    return n1;
   }else{
-    return n2;
+    retun n2;
   }
 }; */
 
 //Feb 2020
-const maxOfTwoNumbers = (n1, n2) => n1 > n2 ? n1 : n2;
+const maxOfTwoNumbers = (n1, n2) => n1 > n2 || n1 === n2 ? n1 : n2;
 console.log(maxOfTwoNumbers(3, 2));
+console.log(maxOfTwoNumbers(4, 4));
+console.log(maxOfTwoNumbers(3, 4));
 
 // Finding Longest Word
 let words = [
